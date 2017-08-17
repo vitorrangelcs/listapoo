@@ -6,7 +6,6 @@ int main()
      int valor;
      int m[12];
      int teste;
-     char t;
      int i;
 printf ("Digite um valor de 1 a 12: ");
   scanf("%d", &valor);
