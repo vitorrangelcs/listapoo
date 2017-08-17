@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float p,a,i,total,res,res1;
+    int e;
+    printf("Informe o valor emprestado");
+    scanf("%f",&p);
+    printf("informe o valor da parcela mensal");
+    scanf("%f",&a);
+    printf("informe a porcentagem de juros");
+    scanf("%f",&i);
+    i=i/100;
+    i=p*i;
+    for(e=1;total<p;e++){
+        total=total+a;
+        printf("Parcela numero %d:\n",e);
+        printf("Valor Pago %.2f\n",total);
+        res=p-total;
+         if(a>res){
+            printf("Parcela residual %.2f\n",res);
+            total=p;
+        }
+    }
+    printf("juros a serem pagos %.2f\n",i);
+    total=i+res;
+    printf("valor total ultima parcela %2.f\n",total);
+    printf("Meses para quitação: %d",e);
+
+    return 0;
+}
