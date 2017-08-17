@@ -2,28 +2,39 @@
 #include <stdlib.h>
 int main()
 {
-    int  i,num,primo;
+    int  i,  num, primo, teste;
+    printf("Numeros a serem testados:\n");
+    scanf("%d",&teste);
+    for(teste<=0;teste--;){
     printf("Digite um numero:\n");
     scanf("%d", &num);
     primo = prim(num);
     if (primo == 1){
-    printf("O numero %d eh primo.\n",num);
+    printf("O numero %d eh primo\n",num);
     }else{
-    printf("O numero %d nao eh primo.",num);
+    printf("O numero %d nao eh primo\n",num);
     }
+}
     return 0;
 }
 
-int prim(int a){
+int prim(int a)
+{
     int  i,  vz = 0, vlr;
-    for (i = 1; i <= a && vz <= 3; i++){
+    for (i = 1; i <= a && vz <= 3; i++)
+    {
         if (a % i == 0)
         vz ++;
     }
-    if (vz == 2){
+
+    if (vz == 2)
+    {
      vlr = 1;
-    }else{
+    }
+    else
+    {
      vlr = 0;
     }
+
     return vlr;
 }
