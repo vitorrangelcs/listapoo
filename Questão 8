@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main()
 {
-    int  i,  num, primo;
+    int  i,num,primo;
     printf("Digite um numero:\n");
     scanf("%d", &num);
     primo = prim(num);
@@ -14,23 +14,16 @@ int main()
     return 0;
 }
 
-int prim(int a)
-{
+int prim(int a){
     int  i,  vz = 0, vlr;
-    for (i = 1; i <= a && vz <= 3; i++)
-    {
+    for (i = 1; i <= a && vz <= 3; i++){
         if (a % i == 0)
         vz ++;
     }
-
-    if (vz == 2)
-    {
+    if (vz == 2){
      vlr = 1;
-    }
-    else
-    {
+    }else{
      vlr = 0;
     }
-
     return vlr;
 }
